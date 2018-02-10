@@ -1,0 +1,27 @@
+{
+  "name": "rolandsusans/console-print",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "rolands.usans",
+      "email": "rolands.usans@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Console\\Output\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Console\\Output\\Tests\\": "tests/"
+    }
+  }
+}
