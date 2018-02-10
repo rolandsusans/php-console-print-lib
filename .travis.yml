@@ -6,8 +6,11 @@ php:
 
 before_script:
   - composer self-update
-
 install:
   - composer install
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit -c phpunit.xml
+after_success:
+  - travis_retry php vendor/bin/php-coveralls
+  # or enable logging
+  - travis_retry php vendor/bin/php-coveralls -v
