@@ -1,12 +1,12 @@
 <?php declare(strict_types = 1);
 
-namespace Console\Output\Tests\Unit;
+namespace Console\Tests\Unit;
 
-use Console\Output\Console;
-use Console\Output\Modifier\Background;
-use Console\Output\Modifier\Option;
-use Console\Output\Modifier\Text;
-use Console\Output\Tests\TestCase;
+use Console\Console;
+use Console\Modifier\Background;
+use Console\Modifier\Option;
+use Console\Modifier\Text;
+use Console\Tests\TestCase;
 
 class OutputTest extends TestCase
 {
@@ -19,7 +19,7 @@ class OutputTest extends TestCase
     }
 
     /**
-     * @expectedException \Console\Output\Exception\Text
+     * @expectedException \Console\Exception\Text
      * @expectedExceptionMessage Invalid text color received
      */
     public function testExceptionInvalidTextColor()
@@ -28,7 +28,7 @@ class OutputTest extends TestCase
     }
 
     /**
-     * @expectedException \Console\Output\Exception\Background
+     * @expectedException \Console\Exception\Background
      * @expectedExceptionMessage Invalid background color received
      */
     public function testExceptionInvalidBackgroundColor()
@@ -37,7 +37,7 @@ class OutputTest extends TestCase
     }
 
     /**
-     * @expectedException \Console\Output\Exception\Option
+     * @expectedException \Console\Exception\Option
      * @expectedExceptionMessage Invalid option received
      */
     public function testExceptionInvalidOption()

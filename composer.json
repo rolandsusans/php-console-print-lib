@@ -17,12 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Console\\Output\\": "src/"
+      "Console\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Console\\Output\\Tests\\": "tests/"
+      "Console\\Tests\\": "tests/"
     }
   }
 }

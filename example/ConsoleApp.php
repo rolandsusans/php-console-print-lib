@@ -1,9 +1,9 @@
 <?php declare(strict_types = 1);
 
-use Console\Output\Console;
-use Console\Output\Modifier\Background;
-use Console\Output\Modifier\Option;
-use Console\Output\Modifier\Text;
+use Console\Console;
+use Console\Modifier\Background;
+use Console\Modifier\Option;
+use Console\Modifier\Text;
 
 require __DIR__ . '/../vendor/autoload.php';
 

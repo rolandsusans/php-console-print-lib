@@ -1,13 +1,13 @@
 <?php declare(strict_types = 1);
 
-namespace Console\Output;
+namespace Console;
 
-use Console\Output\Exception\Background as BackgroundException;
-use Console\Output\Exception\Option as OptionException;
-use Console\Output\Exception\Text as TextException;
-use Console\Output\Modifier\Background;
-use Console\Output\Modifier\Option;
-use Console\Output\Modifier\Text;
+use Console\Exception\Background as BackgroundException;
+use Console\Exception\Option as OptionException;
+use Console\Exception\Text as TextException;
+use Console\Modifier\Background;
+use Console\Modifier\Option;
+use Console\Modifier\Text;
 
 class Console
 {
@@ -27,9 +27,9 @@ class Console
      *
      * @see Option
      *
-     * @throws \Console\Output\Exception\Option
-     * @throws \Console\Output\Exception\Background
-     * @throws \Console\Output\Exception\Text
+     * @throws \Console\Exception\Option
+     * @throws \Console\Exception\Background
+     * @throws \Console\Exception\Text
      */
     public static function log(
         string $message,
@@ -67,17 +67,5 @@ class Console
         }
 
         echo $message;
-    }
-
-    /**
-     * Plays a bell sound in console (if available)
-     *
-     * @param  integer $count Bell play count
-     *
-     * @return void Bell play string
-     */
-    public static function bell($count = 1): void
-    {
-        echo str_repeat("\007", $count);
     }
 }

@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 
-namespace Console\Output\Modifier;
+namespace Console\Modifier;
 
 
 class Text extends Modifier

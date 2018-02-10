@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace Console\Output\Tests;
+namespace Console\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
