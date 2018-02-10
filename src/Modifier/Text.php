@@ -4,28 +4,44 @@
 namespace Console\Output\Modifier;
 
 
-use ReflectionClass;
-
 class Text extends Modifier
 {
     public CONST BOLD         = 'bold';
+
     public CONST DIM          = 'dim';
+
     public CONST BLACK        = 'black';
+
     public CONST DARK_GREY    = 'dark_gray';
+
     public CONST BLUE         = 'blue';
+
     public CONST LIGHT_BLUE   = 'light_blue';
+
     public CONST GREEN        = 'green';
+
     public CONST LIGHT_GREEN  = 'light_green';
+
     public CONST CYAN         = 'cyan';
+
     public CONST LIGHT_CYAN   = 'light_cyan';
+
     public CONST RED          = 'red';
+
     public CONST LIGHT_RED    = 'light_red';
+
     public CONST PURPLE       = 'purple';
+
     public CONST LIGHT_PURPLE = 'light_purple';
+
     public CONST BROWN        = 'brown';
+
     public CONST YELLOW       = 'yellow';
+
     public CONST LIGHT_GRAY   = 'light_gray';
+
     public CONST WHITE        = 'white';
+
     public CONST NORMAL       = 'normal';
 
     public static $modifier_symbol = [
@@ -51,6 +67,22 @@ class Text extends Modifier
     ];
 
     /**
+     * Returns specific symbol for output modification in console
+     *
+     * @param string $color
+     *
+     * @return string
+     */
+    public static function getSymbol(string $color): ?string
+    {
+        if (self::isValid($color)) {
+            return self::$modifier_symbol[$color];
+        }
+
+        return null;
+    }
+
+    /**
      * Method validates whether ot not color is valid
      *
      * @param string $color
@@ -67,21 +99,5 @@ class Text extends Modifier
             return false;
         }
 
-    }
-
-    /**
-     * Returns specific symbol for output modification in console
-     *
-     * @param string $color
-     *
-     * @return string
-     */
-    public static function getSymbol(string $color): ?string
-    {
-        if (self::isValid($color)) {
-            return self::$modifier_symbol[$color];
-        }
-
-        return null;
     }
 }

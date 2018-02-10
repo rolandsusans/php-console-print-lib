@@ -22,6 +22,22 @@ class Option extends Modifier
     ];
 
     /**
+     * Returns specific symbol for output modification in console
+     *
+     * @param string $option
+     *
+     * @return string|null
+     */
+    public static function getSymbol(string $option): ?string
+    {
+        if (self::isValid($option)) {
+            return self::$options[$option];
+        }
+
+        return null;
+    }
+
+    /**
      * Method validates whether ot not color is valid
      *
      * @param string $option
@@ -37,21 +53,5 @@ class Option extends Modifier
         } catch (\ReflectionException $e) {
             return false;
         }
-    }
-
-    /**
-     * Returns specific symbol for output modification in console
-     *
-     * @param string $option
-     *
-     * @return string|null
-     */
-    public static function getSymbol(string $option): ?string
-    {
-        if (self::isValid($option)) {
-            return self::$options[$option];
-        }
-
-        return null;
     }
 }

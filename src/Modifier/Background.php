@@ -4,17 +4,22 @@
 namespace Console\Output\Modifier;
 
 
-use ReflectionClass;
-
 class Background extends Modifier
 {
     public const BLACK      = 'black';
+
     public const RED        = 'red';
+
     public const GREEN      = 'green';
+
     public const YELLOW     = 'yellow';
+
     public const BLUE       = 'blue';
+
     public const MAGENTA    = 'magenta';
+
     public const CYAN       = 'cyan';
+
     public const LIGHT_GRAY = 'light_gray';
 
     public static $background_colors = [
@@ -28,6 +33,21 @@ class Background extends Modifier
         self::LIGHT_GRAY => '47',
     ];
 
+    /**
+     * Returns specific symbol for output modification in console
+     *
+     * @param string $color
+     *
+     * @return string|null
+     */
+    public static function getSymbol(string $color): ?string
+    {
+        if (self::isValid($color)) {
+            return self::$background_colors[$color];
+        }
+
+        return null;
+    }
 
     /**
      * Method validates whether ot not color is valid
@@ -45,21 +65,5 @@ class Background extends Modifier
         } catch (\ReflectionException $e) {
             return false;
         }
-    }
-
-    /**
-     * Returns specific symbol for output modification in console
-     *
-     * @param string $color
-     *
-     * @return string|null
-     */
-    public static function getSymbol(string $color): ?string
-    {
-        if (self::isValid($color)) {
-            return self::$background_colors[$color];
-        }
-
-        return null;
     }
 }

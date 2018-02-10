@@ -17,6 +17,7 @@ abstract class Modifier implements ModifierInterface
     public static function getAll(string $class = __CLASS__): array
     {
         $class = new ReflectionClass($class);
+
         return $class->getConstants();
     }
 }
