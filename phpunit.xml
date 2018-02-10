@@ -15,8 +15,13 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./src</directory>
         </whitelist>
+        <filter>
+            <blacklist>
+                <directory suffix=".php">./vendor/</directory>
+            </blacklist>
+        </filter>
     </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
