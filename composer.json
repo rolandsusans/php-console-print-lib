@@ -1,6 +1,8 @@
 {
   "name": "rolandsusans/console-print",
   "type": "library",
+  "description": "This lib is dedicated for printing colorful stuff to console.",
+  "keywords": ["library", "console logger", "colorful logs"],
   "license": "MIT",
   "authors": [
     {
