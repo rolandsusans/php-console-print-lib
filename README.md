@@ -6,7 +6,7 @@
 ![](/example/output.png)
 # Installation
 ```bash
-composer requrire rolandsusans/console-print
+composer require rolandsusans/console-print
 ```
 # Usage
 ```php
