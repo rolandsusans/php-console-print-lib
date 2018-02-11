@@ -1,11 +1,11 @@
 # PHP console print 
 [![Build Status](https://travis-ci.org/rolandsusans/php-console-print-lib.svg?branch=master)](https://travis-ci.org/rolandsusans/php-console-print-lib)
 [![Coverage Status](https://coveralls.io/repos/github/rolandsusans/php-console-print-lib/badge.svg?branch=master)](https://coveralls.io/github/rolandsusans/php-console-print-lib?branch=master)
-This lib is dedicated for printing colorful stuff to console. 
+## This lib is dedicated for printing colorful stuff to console. 
 ![](/example/output.png)
 # Installation
 ```bash
-    composer requrire rolandsusans/console-print
+composer requrire rolandsusans/console-print
 ```
 # Usage
 ```php
