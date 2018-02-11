@@ -58,12 +58,8 @@ class Background extends Modifier
      */
     public static function isValid(string $color): bool
     {
-        try {
-            $constants = self::getAll(__CLASS__);
+        $constants = self::getAll(__CLASS__);
 
-            return \in_array($color, $constants, true);
-        } catch (\ReflectionException $e) {
-            return false;
-        }
+        return \in_array($color, $constants, true);
     }
 }

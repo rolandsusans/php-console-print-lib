@@ -12,12 +12,16 @@ abstract class Modifier implements ModifierInterface
      * @param string $class
      *
      * @return array
-     * @throws \ReflectionException
      */
     public static function getAll(string $class = __CLASS__): array
     {
-        $class = new ReflectionClass($class);
+        try {
+            $class = new ReflectionClass($class);
 
-        return $class->getConstants();
+            return $class->getConstants();
+        } catch (\ReflectionException $e) {
+            return [];
+        }
+
     }
 }

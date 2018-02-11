@@ -46,12 +46,8 @@ class Option extends Modifier
      */
     public static function isValid(string $option): bool
     {
-        try {
-            $constants = self::getAll(__CLASS__);
+        $constants = self::getAll(__CLASS__);
 
-            return \in_array($option, $constants, true);
-        } catch (\ReflectionException $e) {
-            return false;
-        }
+        return \in_array($option, $constants, true);
     }
 }
