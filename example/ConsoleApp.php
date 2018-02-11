@@ -30,4 +30,4 @@ class ConsoleApp
     }
 }
 
-$console = (new ConsoleApp())->demonstrate();
+(new ConsoleApp())->demonstrate();
