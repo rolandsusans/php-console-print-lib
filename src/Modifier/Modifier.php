@@ -5,6 +5,7 @@ namespace Console\Modifier;
 
 
 use ReflectionClass;
+use ReflectionException;
 
 abstract class Modifier implements ModifierInterface
 {
@@ -19,7 +20,7 @@ abstract class Modifier implements ModifierInterface
             $class = new ReflectionClass($class);
 
             return $class->getConstants();
-        } catch (\ReflectionException $e) {
+        } catch (ReflectionException $e) {
             return [];
         }
 
