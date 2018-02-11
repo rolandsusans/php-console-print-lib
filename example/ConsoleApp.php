@@ -11,21 +11,21 @@ class ConsoleApp
 {
     public function demonstrate(): void
     {
-        $text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-        $textColors = (new ReflectionClass(Text::class))->getConstants();
+        $text             = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+        $textColors       = (new ReflectionClass(Text::class))->getConstants();
         $backgroundColors = (new ReflectionClass(Background::class))->getConstants();
-        $options = (new ReflectionClass(Option::class))->getConstants();
+        $options          = (new ReflectionClass(Option::class))->getConstants();
 
-        foreach ($textColors as $color){
-            Console::log($text."\n",$color);
+        foreach ($textColors as $color) {
+            Console::log($text . "\n", $color);
         }
 
-        foreach ($backgroundColors as $color){
-            Console::log($text."\n",null,$color);
+        foreach ($backgroundColors as $color) {
+            Console::log($text . "\n", null, $color);
         }
 
-        foreach ($options as $option){
-            Console::log($text."\n",null,null,$option);
+        foreach ($options as $option) {
+            Console::log($text . "\n", null, null, $option);
         }
     }
 }
