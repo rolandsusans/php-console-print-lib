@@ -17,3 +17,11 @@ use Console\Modifier\Text;
 
 Console::log('myMessage',Text::GREEN, Background::RED, Options::UNDERLINE);
 ```
+#Road Map
+
+- [ ] Dependency injection 
+- [ ] Refactor namespace to `\RolandsUsans\...`
+- [ ] [Progress Bar](https://symfony.com/doc/current/components/console/helpers/progressbar.html)
+- [ ] Ability to specify output stream, `STDOUT`, `STERR`, file or function
+- [ ] Ability to use it like I would `printf`
+- [ ] Singleton design pattern
